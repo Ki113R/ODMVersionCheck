@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
         val expVersion = getExpectedODMVersion()
         val gotVersion = getCurrentODMVersion()
         if(expVersion != null)
-            expVersionText.text = expVersion!!.raw
+            expVersionText.text = expVersion.raw
         if(gotVersion != null)
-            gotVersionText.text = gotVersion!!.raw
-        if(expVersion != null || (gotVersion != null && expVersion!!.raw != gotVersion!!.raw))
+            gotVersionText.text = gotVersion.raw
+        if(expVersion != null || (gotVersion != null && expVersion?.raw != gotVersion.raw))
             gotVersionText.setTextColor(Color.RED)
     }
 }
